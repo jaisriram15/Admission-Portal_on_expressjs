@@ -1,4 +1,5 @@
 Admission Portal
+----------------
 This project is a full-stack web application designed to streamline the admission process for users and administrators. The application is built with Express.js and Node.js for the backend, and Bootstrap, HTML, and JavaScript for the frontend. The data is stored in MongoDB, and image storage is handled using Cloudinary.
 
 Features
