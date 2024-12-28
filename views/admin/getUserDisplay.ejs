@@ -1,0 +1,52 @@
+<%- include('../header.ejs') %>
+
+<br>
+<br>
+<br>
+<br>
+<h1 class="text-center mb-3">Admin Dashboard</h1>
+<div class="container">
+    <div class="row">
+        <table class="table table-bordered table-responsive">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>City</th>
+                <th>Status</th>
+                <th>Comment</th>
+                <th></th>
+                <th>Action</th>
+            </tr>
+            <% c.forEach((item)=>{%>
+                <tr>
+                    <td><%= item._id %></td>
+                    <td><%= item.name %></td>
+                    <td><%= item.email %></td>
+                    <td><%= item.address %></td>
+                    <td class="bg-warning"><%= item.status %></td>
+                    <td>
+                        <form action="/update_status/<%= item._id%>" method="post">
+                            <textarea name="comment"></textarea>
+                            <input type="hidden" name="name" value="<%= item.name %>">
+                            <input type="hidden" name="email" value="<%= item.email %>">    
+                        </td>
+                        <td>
+                        <button type="submit" name="status" class="btn btn-success" value="Approved">Approved</button>
+                        <button type="submit" name="status" class="btn btn-danger" value="Reject">Reject</button>
+                        </form>
+                    </td>
+                    <td>
+                        <a href="/adminView/<%= item._id %>" class="btn btn-primary">View</a>
+                        <a href="/adminedit/<%= item._id %>" class="btn btn-primary">Edit</a>
+                        
+                    </td>
+                </tr>
+
+            <% }) %>
+        </table>
+    </div>
+
+</div>
+
+<%- include('../footer.ejs') %>

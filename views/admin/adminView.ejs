@@ -1,0 +1,45 @@
+
+<%- include('../header.ejs') %>
+
+<div class="container">
+
+    <h1 style="margin-top: 80px;text-align: center;">Admin View</h1>
+    <table class="table table-border mt-3">
+        <thead>
+            <tr >
+                <th style="background-color: #2a1a6f; color: white;">ID</th>
+                <th style="background-color: #2a1a6f; color: white;">User Name</th>
+                <th style="background-color: #2a1a6f; color: white;">College</th>
+                <th style="background-color: #2a1a6f; color: white;">Course</th>
+                <th style="background-color: #2a1a6f; color: white;">Branch</th>
+                <th style="background-color: #2a1a6f; color: white;">Status</th>
+                <th style="background-color: #2a1a6f; color: white;">Comment</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            
+
+                <tr >
+                    <td><%=adminview.id %></td>
+                    <td><%=adminview.name %></td>
+                    <td><%=adminview.college %></td>
+                    <td><%=adminview.course %></td>
+                    <td><%=adminview.branch %></td>
+                    <td><%=adminview.status %></td>
+                    <td><%=adminview.comment %></td>
+                    
+                </tr>
+
+            
+
+            
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<%- include('../footer.ejs') %>
+

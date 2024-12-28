@@ -1,0 +1,58 @@
+<%- include('../header.ejs') %>
+<div class="container">
+
+    <h1 style="margin-top: 80px;text-align: center;">Course Display</h1>
+
+      <!---For Message display on the screen while registration if ID already exit-->
+      <% if(message.length > 0){ %>
+        <div class="alert alert-success">
+            <%= message %>
+        </div>
+        <% } %>
+
+    <table class="table table-bordered table-responsive mt-3">
+        <thead>
+            <tr >
+                <th style="background-color: #2a1a6f; color: white;">ID</th>
+                <th style="background-color: #2a1a6f; color: white;">User Name</th>
+                <th style="background-color: #2a1a6f; color: white;">College</th>
+                <th style="background-color: #2a1a6f; color: white;">Course</th>
+                <th style="background-color: #2a1a6f; color: white;">Branch</th>
+                <th style="background-color: #2a1a6f; color: white;">Status</th>
+                <th style="background-color: #2a1a6f; color: white;">Comment</th>
+                <th style="background-color: #2a1a6f; color: white;">Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="records">
+
+            <% d.forEach((item)=>{ %>
+
+                <tr >
+                    <td><%= item.id %></td>
+                    <td><%= item.name %></td>
+                    <td><%= item.college %></td>
+                    <td><%= item.course %></td>
+                    <td><%= item.branch %></td>
+                    <td><%= item.status %></td>
+                    <td><%= item.comment %></td>
+                    <td>
+                        <a href="/courseView/<%= item.id %>" class="btn btn-info">view</a>
+                        <a href="/courseEdit/<%= item.id %>" class="btn btn-success">edit</a>
+                        <a href="/courseDelete/<%= item.id %>" class="btn btn-danger">delete</a>
+                    </td>
+                </tr>
+
+            <% }) %>
+
+            
+
+        </tbody>
+
+    </table>
+
+</div>
+
+
+
+<%- include('../footer.ejs') %>

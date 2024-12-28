@@ -1,0 +1,49 @@
+<%- include('../header.ejs') %>
+<div class="container">
+
+    <h1 style="margin-top: 80px;text-align: center;">Course view</h1>
+
+     
+
+    <table class="table table-bordered table-responsive mt-3">
+        <thead>
+            <tr >
+                <th style="background-color: #2a1a6f; color: white;">ID</th>
+                <th style="background-color: #2a1a6f; color: white;">User Name</th>
+                <th style="background-color: #2a1a6f; color: white;">College</th>
+                <th style="background-color: #2a1a6f; color: white;">Course</th>
+                <th style="background-color: #2a1a6f; color: white;">Branch</th>
+                <th style="background-color: #2a1a6f; color: white;">Status</th>
+                <th style="background-color: #2a1a6f; color: white;">Comment</th>
+                
+            </tr>
+        </thead>
+
+        <tbody id="records">
+
+            
+
+                <tr >
+                    <td><%= courseview.id %></td>
+                    <td><%= courseview.name %></td>
+                    <td><%= courseview.college %></td>
+                    <td><%= courseview.course %></td>
+                    <td><%= courseview.branch %></td>
+                    <td><%= courseview.status %></td>
+                    <td><%= courseview.comment %></td>
+                   
+                </tr>
+
+            
+
+            
+
+        </tbody>
+
+    </table>
+
+</div>
+
+
+
+<%- include('../footer.ejs') %>

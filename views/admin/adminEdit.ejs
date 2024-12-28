@@ -1,0 +1,101 @@
+<%- include('../header.ejs') %>
+<div class="container">
+
+    <h1 style="margin-top: 80px;text-align: center;">Admin Edit</h1>
+    
+     <!--Form Start-->
+     <form action="/adminEdit/<%= adminedit.id %>" method="post">
+
+
+        <div class=" input-group mb-2">
+            <span class="input-group-text" id="inputGroup-sizing-default">User Name</span>
+            <input type="text " name="name" value="<%= adminedit.name %>" class="form-control">
+        </div>
+
+        <div class=" input-group mb-2">
+            <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+            <input type="email " name="email" value="<%= adminedit.email %>" class="form-control" placeholder="abc@gmail.com">
+        </div>
+
+        <div class=" input-group mb-2">
+            <span class="input-group-text" id="inputGroup-sizing-default">Mobile Number</span>
+            <input type="tel " name="mobileNo" value="<%= adminedit.number %>" class="form-control">
+        </div>
+
+        <div class=" input-group mb-2">
+            <span class="input-group-text" id="inputGroup-sizing-default">DOB</span>
+            <input type="date" name="dob" value="<%= adminedit.dob %>" class="form-control">
+        </div>
+
+        <div class="mb-2">
+            <label for="" class="mb-2">Gender</label>
+            <br>
+            <input <%= adminedit.gender=='male'?'checked':'' %> type="radio" name="gender" value="male">&nbsp;Male
+            <input <%= adminedit.gender=='female'?'checked':'' %> type="radio" name="gender" value="female">&nbsp;Female
+            <br>
+
+
+        </div>
+
+        <div class=" input-group mb-2">
+            <span class="input-group-text" id="inputGroup-sizing-default">Address</span>
+            <textarea class="form-control" name="address" id="" cols="1" rows="5"><%= adminedit.address %></textarea>
+            
+        </div>
+
+
+
+        <div class="input-group mb-2">
+
+            <span class="input-group-text" id="inputGroup-sizing-default">Colleges</span>
+            <select class="form-select" name="college" id="">
+                <option value="" selected="">Choose..</option>
+                <option <%= adminedit.college=='IIT Mumbai'?'selected':'' %> value="IIT Mumbai">IIT Mumbai</option>
+                <option <%= adminedit.college=='IIT Kharagpur'?'selected':'' %> value="IIT Kharagpur">IIT Kharagpur</option>
+                <option <%= adminedit.college=='IIT Delhi'?'selected':'' %> value="IIT Delhi">IIT Delhi</option>
+
+            </select>
+
+        </div>
+
+        <div class="input-group mb-2">
+
+            <span class="input-group-text" id="inputGroup-sizing-default">Course</span>
+            <select class="form-select" name="course" id="">
+                <option value="" selected="">Choose..</option>
+                <option <%= adminedit.course=='B.Tech'?'selected':'' %> value="B.Tech">B.Tech</option>
+                <option <%= adminedit.course=='BCA'?'selected':'' %> value="BCA">BCA</option>
+                <option <%= adminedit.course=='MCA'?'selected':'' %> value="MCA">MCA</option>
+
+
+            </select>
+
+        </div>
+
+        <div class="input-group mb-2">
+
+            <span class="input-group-text" id="inputGroup-sizing-default">Branch</span>
+            <select class="form-select" name="branch" id="">
+                <option value="" selected="">Choose..</option>
+                <option <%= adminedit.branch=='CS'?'selected':'' %> value="CS">CS</option>
+                <option <%= adminedit.branch=='IT'?'selected':'' %> value="IT">IT </option>
+                <option <%= adminedit.branch=='EEE'?'selected':'' %> value="EEE">EEE </option>
+                <option <%= adminedit.branch=='ME'?'selected':'' %> value="ME">ME </option>
+
+            </select>
+
+        </div>
+
+        <div class="form-group text-center">
+            <button type="submit" class="btn text-light ">Update</button>
+        </div>
+        
+
+    </form>
+    <!--Form Start End-->
+
+</div>
+
+
+
+<%- include('../footer.ejs') %>
