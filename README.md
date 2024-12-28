@@ -42,9 +42,12 @@ Admin Dashboard
 
 ------------------------------
 How to Run
-Clone the repository.
-Install dependencies using npm install.
-Set up your MongoDB and Cloudinary credentials in an .env file.
-Run the project using node app.js or npm start.
-Open the application in your browser.
+-----------
+1. Clone the repository.
+2. Install dependencies using npm install.
+3. Set up your MongoDB and Cloudinary credentials in an .env file.
+4. Run the project using node app.js or npm start.
+5. Open the application in your browser.
+   
+----------------------------------
 This project is designed to provide a seamless and secure experience for users applying to courses and administrators managing the admission process.
